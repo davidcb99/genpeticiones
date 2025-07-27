@@ -1,0 +1,127 @@
+{
+  "name": "GenPeticiones - Sistema de Gestión",
+  "short_name": "GenPeticiones",
+  "description": "Sistema completo de gestión de peticiones con panel de administración",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f5f5",
+  "theme_color": "#722F37",
+  "scope": "./",
+  "lang": "es",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHZpZXdCb3g9IjAgMCA3MiA3MiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNzIiIGhlaWdodD0iNzIiIHJ4PSIxNiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNIDE4IDIwIEEgMTIgMTIgMCAwIDEgMzAgOCBMIDQyIDggQSAxMiAxMiAwIDAgMSA1NCAyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxyZWN0IHg9IjI2IiB5PSIxNiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMiIGZpbGw9IiNBNEM2MzkiLz48cGF0aCBkPSJNIDI0IDI4IEEgOCA4IDAgMCAwIDQ4IDI4IiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iMzYiIHk9IjU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwgQmxhY2siIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiM3MjJGMzciPkdFTjwvdGV4dD48L3N2Zz4=",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MiIgZmlsbD0id2hpdGUiLz48cGF0aCBkPSJNIDQ4IDUyIEEgMzIgMzIgMCAwIDEgODAgMjAgTCAxMTIgMjAgQSAzMiAzMiAwIDAgMSAxNDQgNTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSI5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSI2NiIgeT0iNDIiIHdpZHRoPSI2MCIgaGVpZ2h0PSI4IiBmaWxsPSIjQTRDNjM5Ii8+PHBhdGggZD0iTSA2MiA3MyBBIDIyIDIyIDAgMCAwIDEzMCA3MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTRDNjM5IiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjx0ZXh0IHg9Ijk2IiB5PSIxNDQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayIgZm9udC1zaXplPSI0MiIgZm9udC13ZWlnaHQ9IjkwMCIgZmlsbD0iIzcyMkYzNyI+R0VOPC90ZXh0Pjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTIiIGZpbGw9IndoaXRlIi8+PHBhdGggZD0iTSAxMjggMTM5IEEgODUgODUgMCAwIDEgMjEzIDU0IEwgMjk5IDU0IEEgODUgODUgMCAwIDEgMzg0IDEzOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cmVjdCB4PSIxNzYiIHk9IjExMiIgd2lkdGg9IjE2MCIgaGVpZ2h0PSIyMCIgZmlsbD0iI0E0QzYzOSIvPjxwYXRoIGQ9Ik0gMTY1IDE5NSBBIDU4IDU4IDAgMCAwIDM0NyAxOTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0E0QzYzOSIgc3Ryb2tlLXdpZHRoPSIyNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iMjU2IiB5PSIzODQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCBCbGFjayIgZm9udC1zaXplPSIxMTIiIGZvbnQtd2VpZ2h0PSI5MDAiIGZpbGw9IiM3MjJGMzciPkdFTjwvdGV4dD48L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Empezar Proceso",
+      "short_name": "Empezar",
+      "description": "Comenzar el proceso de gestión de personas",
+      "url": "./index.html#empezar",
+      "icons": [
+        {
+          "src": "icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Consultar PDFs",
+      "short_name": "Consultar",
+      "description": "Ver y descargar PDFs guardados",
+      "url": "./index.html#consultar",
+      "icons": [
+        {
+          "src": "icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Panel Admin",
+      "short_name": "Admin",
+      "description": "Acceso al panel de administración",
+      "url": "./index.html#admin",
+      "icons": [
+        {
+          "src": "icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
