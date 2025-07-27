@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Icono PNG</title>
+</head>
+<body>
+    <canvas id="canvas" width="192" height="192" style="border: 1px solid #ccc;"></canvas>
+    <br><br>
+    <button onclick="downloadIcon()">Descargar icon-192.png</button>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Limpiar canvas con fondo blanco
+        ctx.fillStyle = 'white';
+        ctx.fillRect(0, 0, 192, 192);
+        
+        // Configurar estilos
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        
+        // Arcos superiores en burdeos
+        ctx.strokeStyle = '#722F37';
+        ctx.lineWidth = 16;
+        ctx.beginPath();
+        ctx.arc(96, 96, 48, Math.PI, Math.PI * 1.5);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.arc(96, 96, 48, Math.PI * 1.5, 0);
+        ctx.stroke();
+        
+        // Barra verde horizontal
+        ctx.fillStyle = '#A4C639';
+        ctx.fillRect(72, 88, 48, 16);
+        
+        // Arco inferior verde
+        ctx.strokeStyle = '#A4C639';
+        ctx.lineWidth = 16;
+        ctx.beginPath();
+        ctx.arc(96, 96, 32, 0, Math.PI);
+        ctx.stroke();
+        
+        // Letras GEN
+        ctx.font = 'bold 48px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        
+        // G en burdeos
+        ctx.fillStyle = '#722F37';
+        ctx.fillText('G', 60, 165);
+        
+        // E en verde
+        ctx.fillStyle = '#A4C639';
+        ctx.fillText('E', 96, 165);
+        
+        // N en burdeos
+        ctx.fillStyle = '#722F37';
+        ctx.fillText('N', 132, 165);
+        
+        function downloadIcon() {
+            const link = document.createElement('a');
+            link.download = 'icon-192.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
