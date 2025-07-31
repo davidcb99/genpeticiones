@@ -1,0 +1,3764 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenPeticiones</title>
+    <!-- Version: 2.0 - Sin Login -->
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#722F37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="GenPeticiones">
+    <meta name="msapplication-TileColor" content="#722F37">
+    <meta name="msapplication-TileImage"
+        content="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCIgdmlld0JveD0iMCAwIDE0NCAxNDQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE0NCIgaGVpZ2h0PSIxNDQiIHJ4PSIzMiIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgLS0+PHBhdGggZD0iTSAzNiA1NCBBIDM2IDM2IDAgMCAxIDcyIDE4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3MjJGMzciIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gMTA4IDU0IEEgMzYgMzYgMCAwIDAgNzIgMTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PCEtLSBCYXJyYSB2ZXJkZSBob3Jpem9udGFsIC0tPjxyZWN0IHg9IjU0IiB5PSI0OCIgd2lkdGg9IjM2IiBoZWlnaHQ9IjEyIiBmaWxsPSIjQTRDNjM5Ii8+PCEtLSBBcmNvIGluZmVyaW9yIC0tPjxwYXRoIGQ9Ik0gNDggNzggQSAyNCAyNCAwIDAgMCA5NiA3OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTRDNjM5IiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIExldHJhcyBHRU4gLS0+PGcgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjM2IiBmb250LXdlaWdodD0iOTAwIj48dGV4dCB4PSIyNyIgeT0iMTI5IiBmaWxsPSIjNzIyRjM3Ij5HPC90ZXh0Pjx0ZXh0IHg9IjU0IiB5PSIxMjkiIGZpbGw9IiNBNEM2MzkiPkU8L3RleHQ+PHRleHQgeD0iODEiIHk9IjEyOSIgZmlsbD0iIzcyMkYzNyI+TjwvdGV4dD48L2c+PC9zdmc+">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Iconos principales para PWA -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgdmlld0JveD0iMCAwIDE1MiAxNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE1MiIgaGVpZ2h0PSIxNTIiIHJ4PSIzMyIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDM4IDc2IEEgMzggMzggMCAwIDEgNzYgMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAxMTQgNzYgQSAzOCAzOCAwIDAgMCA3NiAzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iNDciIHk9IjY5IiB3aWR0aD0iNTgiIGhlaWdodD0iMTQiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSA1MiAxMDAgQSAyNCAyNCAwIDAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
+    <link rel="shortcut icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgdmlld0JveD0iMCAwIDE1MiAxNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE1MiIgaGVpZ2h0PSIxNTIiIHJ4PSIzMyIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDM4IDc2IEEgMzggMzggMCAwIDEgNzYgMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAxMTQgNzYgQSAzOCAzOCAwIDAgMCA3NiAzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iNDciIHk9IjY5IiB3aWR0aD0iNTgiIGhlaWdodD0iMTQiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSA1MiAxMDAgQSAyNCAyNCAwIDAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgdmlld0JveD0iMCAwIDE1MiAxNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE1MiIgaGVpZ2h0PSIxNTIiIHJ4PSIzMyIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDM4IDc2IEEgMzggMzggMCAwIDEgNzYgMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAxMTQgNzYgQSAzOCAzOCAwIDAgMCA3NiAzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iNDciIHk9IjY5IiB3aWR0aD0iNTgiIGhlaWdodD0iMTQiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSA1MiAxMDAgQSAyNCAyNCAwIDAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgdmlld0JveD0iMCAwIDE1MiAxNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE1MiIgaGVpZ2h0PSIxNTIiIHJ4PSIzMyIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDM4IDc2IEEgMzggMzggMCAwIDEgNzYgMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAxMTQgNzYgQSAzOCAzOCAwIDAgMCA3NiAzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iNDciIHk9IjY5IiB3aWR0aD0iNTgiIGhlaWdodD0iMTQiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSA1MiAxMDAgQSAyNCAyNCAwIDAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==">
+
+    <!-- Meta tags adicionales para PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="GenPeticiones">
+
+    <!-- Librerías externas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Logo Section */
+        .logo-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            max-height: 280px;
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 280px;
+            margin: 0 auto;
+        }
+
+        /* Círculo completo del logo */
+        .logo-circle {
+            position: relative;
+            width: var(--logo-size, 160px);
+            height: var(--logo-size, 160px);
+            margin: 0 auto;
+            border: var(--logo-border, 11px) solid #722F37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        /* Barra verde superior */
+        .logo-circle::before {
+            content: '';
+            position: absolute;
+            top: var(--bar-top, 27px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: var(--bar-width, 70px);
+            height: var(--bar-height, 11px);
+            background: #A4C639;
+            border-radius: calc(var(--bar-height, 11px) / 2);
+        }
+
+        /* Barra verde inferior */
+        .logo-circle::after {
+            content: '';
+            position: absolute;
+            bottom: var(--bar-top, 27px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: var(--bar-width, 70px);
+            height: var(--bar-height, 11px);
+            background: #A4C639;
+            border-radius: calc(var(--bar-height, 11px) / 2);
+        }
+
+        .logo-gen {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: -3px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-gen .g {
+            color: #722F37;
+        }
+
+        .logo-gen .e {
+            color: #A4C639;
+        }
+
+        .logo-gen .n {
+            color: #722F37;
+        }
+
+        /* Lápiz de edición (solo visible para admin) */
+        .logo-edit-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 35px;
+            height: 35px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .logo-edit-btn:hover {
+            background: #5a6fd8;
+            transform: scale(1.1);
+        }
+
+        /* Botones principales */
+        .main-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-button {
+            flex: 1;
+            background: white;
+            border: none;
+            border-radius: 15px;
+            padding: 25px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .admin-button {
+            background: #722F37;
+            color: #A4C639;
+        }
+
+        .admin-button:hover {
+            background: #5a252a;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(114, 47, 55, 0.3);
+        }
+
+        .consultar-button {
+            background: #A4C639;
+            color: #722F37;
+        }
+
+        .consultar-button:hover {
+            background: #8fb332;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(164, 198, 57, 0.3);
+        }
+
+        .button-icon {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .button-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .button-subtitle {
+            font-size: 0.9rem;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        /* Botón Empezamos */
+        .empezamos-button {
+            width: 100%;
+            background: #000000;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .empezamos-button:hover {
+            background: #333333;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Modal de Login */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .modal-buttons button {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-login {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-login:hover {
+            background: #5a6fd8;
+        }
+
+        .btn-cancel {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #5a6268;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Panel de Administración */
+        .admin-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .admin-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .admin-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .admin-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .admin-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .admin-status {
+            background: #A4C639;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .admin-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .admin-card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .credentials-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .credential-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .credential-group h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .credential-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        .credential-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .credential-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-purple {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-purple:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-green {
+            background: #A4C639;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-green:hover {
+            background: #8fb332;
+            transform: translateY(-2px);
+        }
+
+        .upload-area {
+            border: 3px dashed #A4C639;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .upload-area:hover {
+            background: #e9ecef;
+            border-color: #8fb332;
+        }
+
+        .upload-area.dragover {
+            background: #e8f5e8;
+            border-color: #A4C639;
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .upload-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .upload-subtext {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .member-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .member-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .member-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .member-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            resize: vertical;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .member-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .member-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-add {
+            background: #A4C639;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-add:hover {
+            background: #8fb332;
+            transform: translateY(-2px);
+        }
+
+        .btn-clear {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0.5;
+        }
+
+        .btn-clear:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .admin-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn-home {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-home:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+
+        .btn-logout {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 15px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-logout:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+
+        /* Pantalla de Consultar Peticiones */
+        .consultar-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .consultar-container {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .consultar-header {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .consultar-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .consultar-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .search-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-card h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .pdfs-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .pdfs-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .pdfs-header h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pdf-count {
+            background: #A4C639;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pdfs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .pdf-item {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pdf-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .pdf-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .pdf-date {
+            background: #667eea;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .pdf-info {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .pdf-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-download {
+            background: #A4C639;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+        }
+
+        .btn-download:hover {
+            background: #8fb332;
+            transform: translateY(-1px);
+        }
+
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 0.7;
+        }
+
+        .btn-delete:hover {
+            background: #c82333;
+            transform: translateY(-1px);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .pagination-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 50%;
+            background: #e9ecef;
+            color: #6c757d;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pagination-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .pagination-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .pagination-btn:disabled {
+            background: #f8f9fa;
+            color: #ced4da;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .consultar-footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-back {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-back:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Pantalla de Empezamos */
+        .empezamos-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .empezamos-container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 25px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .person-avatar {
+            width: 80px;
+            height: 80px;
+            background: #f8f9fa;
+            border: 3px solid #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 2.5rem;
+            color: #667eea;
+        }
+
+        .person-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .person-field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .person-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .person-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            font-size: 16px;
+            background: #f8f9fa;
+            transition: all 0.3s ease;
+        }
+
+        .person-input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .person-textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            font-size: 14px;
+            background: #f8f9fa;
+            resize: vertical;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .person-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .person-separator {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #e9ecef, transparent);
+            margin: 20px 0;
+        }
+
+        .person-navigation {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .nav-btn {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-anterior {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-anterior:hover:not(:disabled) {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-siguiente {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-siguiente:hover:not(:disabled) {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .btn-siguiente.finalizar {
+            background: #A4C639;
+        }
+
+        .btn-siguiente.finalizar:hover:not(:disabled) {
+            background: #8fb332;
+        }
+
+        .person-counter {
+            background: #A4C639;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .empezamos-footer {
+            text-align: center;
+        }
+
+        .btn-inicio {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .btn-inicio:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        /* Botón de eliminar persona (solo admin) */
+        .delete-person-btn {
+            position: absolute;
+            top: 0;
+            right: -10px;
+            width: 30px;
+            height: 30px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .delete-person-btn:hover {
+            background: #c82333;
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+        }
+
+        /* Pantalla Final de Proceso Completado */
+        .final-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .final-container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 25px;
+            padding: 40px 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .final-header {
+            margin-bottom: 30px;
+        }
+
+        .final-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .final-subtitle {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .stats-container {
+            background: #e8f5e8;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #A4C639;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .pdf-options {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .pdf-options h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .filter-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .filter-option {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .filter-option:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .filter-option.selected {
+            border-color: #667eea;
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-download-final {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .btn-download-final:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+        }
+
+        .admin-save-section {
+            background: #722F37;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-weight: 600;
+        }
+
+        .admin-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .final-navigation {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn-back-final {
+            background: #e9ecef;
+            color: #333;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-back-final:hover {
+            background: #dee2e6;
+            transform: translateY(-2px);
+        }
+
+        .btn-home-final {
+            background: #6c757d;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-home-final:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        .btn-discard {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-discard:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .logo-gen {
+                font-size: 3rem;
+            }
+
+            .main-buttons {
+                flex-direction: column;
+            }
+
+            .main-button {
+                padding: 20px;
+            }
+
+            .button-icon {
+                font-size: 1.5rem;
+            }
+
+            .button-title {
+                font-size: 0.9rem;
+            }
+
+            .button-subtitle {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <div class="logo-container">
+                <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"
+                    style="max-width: 100%; height: auto;">
+                    <!-- Arcos superiores -->
+                    <path d="M 50 100 A 50 50 0 0 1 100 50" fill="none" stroke="#722F37" stroke-width="16"
+                        stroke-linecap="round" />
+                    <path d="M 150 100 A 50 50 0 0 0 100 50" fill="none" stroke="#722F37" stroke-width="16"
+                        stroke-linecap="round" />
+                    <!-- Barra verde horizontal -->
+                    <rect x="75" y="92" width="50" height="16" fill="#A4C639" />
+                    <!-- Arco inferior -->
+                    <path d="M 67 130 A 33 33 0 0 0 133 130" fill="none" stroke="#A4C639" stroke-width="16"
+                        stroke-linecap="round" />
+                    <!-- Letras GEN -->
+                    <g font-family="Arial, sans-serif" font-size="48" font-weight="900">
+                        <text x="38" y="185" fill="#722F37">G</text>
+                        <text x="76" y="185" fill="#A4C639">E</text>
+                        <text x="114" y="185" fill="#722F37">N</text>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Lápiz de edición (solo visible para admin) -->
+            <button id="logoEditBtn" class="logo-edit-btn hidden" onclick="editLogo()" title="Editar logo">
+                ✏️
+            </button>
+        </div>
+
+        <!-- Botones principales -->
+        <div class="main-buttons">
+            <button id="adminButton" class="main-button admin-button" onclick="showAdminPanel()">
+                <div id="adminIcon" class="button-icon">👨‍💼</div>
+                <div id="adminTitle" class="button-title">ACCESO</div>
+                <div id="adminSubtitle" class="button-subtitle">ADMINISTRADOR</div>
+            </button>
+
+            <button class="main-button consultar-button" onclick="goToConsultar()">
+                <div class="button-icon">📋</div>
+                <div class="button-title">CONSULTAR</div>
+                <div class="button-subtitle">PETICIONES</div>
+            </button>
+        </div>
+
+        <!-- Botón Empezamos -->
+        <button class="empezamos-button" onclick="goToEmpezamos()">
+            <span>⭐</span>
+            <span>EMPEZAMOS</span>
+        </button>
+    </div>
+
+
+
+
+
+    <!-- Modal de Edición de Logo -->
+    <div id="logoModal" class="modal hidden">
+        <div class="modal-content" style="max-width: 500px;">
+            <div class="modal-header">🎨 Editar Logo</div>
+
+            <!-- Vista previa del logo -->
+            <div style="text-align: center; margin-bottom: 25px;">
+                <div id="logoPreview"
+                    style="width: 100%; max-width: 280px; height: 200px; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; margin: 0 auto; position: relative; overflow: hidden;">
+                    <div class="logo-container" style="width: 100%; max-width: none;">
+                        <div class="logo-circle">
+                            <div class="logo-gen">
+                                <span class="g">G</span><span class="e">E</span><span class="n">N</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control de tamaño -->
+            <div class="form-group">
+                <label>📏 Altura del logo:</label>
+                <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+                    <span style="font-size: 14px; color: #666;">Pequeño</span>
+                    <input type="range" id="logoSizeSlider" min="120" max="200" value="160"
+                        style="flex: 1; height: 6px; background: #ddd; border-radius: 3px; outline: none;"
+                        oninput="updateLogoSize(this.value)">
+                    <span style="font-size: 14px; color: #666;">Grande</span>
+                </div>
+                <div style="text-align: center; margin-top: 8px; font-size: 14px; color: #666;">
+                    Altura actual: <span id="logoSizeValue">160px</span>
+                </div>
+                <div style="text-align: center; margin-top: 5px; font-size: 12px; color: #999;">
+                    Límites optimizados para móvil
+                </div>
+            </div>
+
+            <!-- Subir nuevo logo -->
+            <div class="form-group">
+                <label>📁 Subir nuevo logo (JPG/PNG):</label>
+                <input type="file" id="logoFileInput" accept=".jpg,.jpeg,.png"
+                    style="width: 100%; padding: 10px; border: 2px dashed #ddd; border-radius: 10px; background: #f9f9f9; cursor: pointer;"
+                    onchange="handleLogoUpload(this)">
+                <div style="font-size: 12px; color: #666; margin-top: 5px;">
+                    Formatos soportados: JPG, PNG (máximo 2MB)
+                </div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="modal-buttons" style="margin-top: 30px;">
+                <button class="btn-login" onclick="saveLogoChanges()">💾 Guardar Cambios</button>
+                <button style="background: #dc3545; color: white; flex: 0.5;" onclick="resetLogo()">🗑️
+                    Restaurar</button>
+                <button class="btn-cancel" onclick="closeLogoModal()">❌ Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Panel de Administración -->
+    <div id="adminPanel" class="admin-panel hidden">
+        <div class="admin-container">
+            <!-- Header del panel -->
+            <div class="admin-header">
+                <h1>🔐 Panel de Administración</h1>
+                <p>Gestión completa del sistema</p>
+            </div>
+
+            <!-- Estado de conexión -->
+            <div class="admin-status">
+                👤 Conectado como: <span id="adminStatusUser">Administrador</span>
+            </div>
+
+            <!-- Cambiar Credenciales -->
+            <div class="admin-card">
+                <h2>🔑 Cambiar Credenciales</h2>
+                <div class="credentials-section">
+                    <!-- Cambiar Contraseña -->
+                    <div class="credential-group">
+                        <h3>🔒 Cambiar Contraseña</h3>
+                        <input type="password" id="currentPassword" class="credential-input"
+                            placeholder="Contraseña actual">
+                        <input type="password" id="newPassword" class="credential-input" placeholder="Nueva contraseña">
+                        <input type="password" id="confirmPassword" class="credential-input"
+                            placeholder="Confirmar contraseña">
+                    </div>
+
+                    <!-- Cambiar Usuario -->
+                    <div class="credential-group">
+                        <h3>👤 Cambiar Usuario</h3>
+                        <input type="password" id="currentPasswordUser" class="credential-input"
+                            placeholder="Contraseña actual">
+                        <input type="text" id="currentUser" class="credential-input" placeholder="Usuario actual"
+                            readonly>
+                        <input type="text" id="newUser" class="credential-input" placeholder="Nuevo nombre de usuario">
+                    </div>
+                </div>
+
+                <div class="credential-buttons">
+                    <button class="btn-purple" onclick="changePassword()">🔒 Cambiar Contraseña</button>
+                    <button class="btn-green" onclick="changeUsername()">👤 Cambiar Usuario</button>
+                </div>
+            </div>
+
+            <!-- Subir Base de Datos -->
+            <div class="admin-card">
+                <h2>📁 Subir Base de Datos</h2>
+                <div class="upload-area" onclick="document.getElementById('databaseFile').click()"
+                    ondrop="handleDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-text">Arrastra un archivo o haz clic para seleccionar</div>
+                    <div class="upload-subtext">Formatos soportados: TXT (nombre/empresa por líneas), CSV, JSON (máx.
+                        5MB)</div>
+                </div>
+                <input type="file" id="databaseFile" accept=".txt,.csv,.json" style="display: none;"
+                    onchange="handleDatabaseUpload(this)">
+                <div style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+                    <strong>Formato TXT:</strong> Una línea para el nombre, siguiente línea para la empresa, y así
+                    sucesivamente.
+                </div>
+            </div>
+
+            <!-- Añadir Nuevo Miembro -->
+            <div class="admin-card">
+                <h2>👥 Añadir Nuevo Miembro</h2>
+                <div class="member-form">
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Nombre de la
+                            persona:</label>
+                        <input type="text" id="memberName" class="member-input" placeholder="Nombre completo">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Nombre de la
+                            empresa:</label>
+                        <input type="text" id="memberCompany" class="member-input" placeholder="Nombre de la empresa">
+                    </div>
+
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Peticiones
+                            (opcional):</label>
+                        <textarea id="memberPetitions" class="member-textarea"
+                            placeholder="Peticiones iniciales..."></textarea>
+                    </div>
+
+                    <div class="member-buttons">
+                        <button class="btn-add" onclick="addNewMember()">➕ Añadir Miembro</button>
+                        <button class="btn-clear" onclick="clearMemberForm()">🗑️ Limpiar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de navegación -->
+            <div class="admin-footer">
+                <button class="btn-home" onclick="goBackHome()" style="width: 100%;">🏠 Volver al Inicio</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Consultar Peticiones -->
+    <div id="consultarScreen" class="consultar-screen hidden">
+        <div class="consultar-container">
+            <!-- Header -->
+            <div class="consultar-header">
+                <h1>📋 Consultar Peticiones</h1>
+                <p>Navega y gestiona los PDFs guardados</p>
+            </div>
+
+            <!-- Filtros de Búsqueda -->
+            <div class="search-card">
+                <h2>🔍 Filtros de Búsqueda</h2>
+                <div>
+                    <label style="display: block; font-weight: 600; margin-bottom: 8px; color: #333;">Filtrar por
+                        fecha:</label>
+                    <select id="dateFilter" class="search-select" onchange="filterPdfs()">
+                        <option value="all">Todas las fechas</option>
+                        <!-- Las fechas se cargarán dinámicamente -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- PDFs Guardados -->
+            <div class="pdfs-card">
+                <div class="pdfs-header">
+                    <h2>📄 PDFs Guardados</h2>
+                    <div class="pdf-count" id="pdfCount">8 PDF</div>
+                </div>
+
+                <!-- Grid de PDFs -->
+                <div class="pdfs-grid" id="pdfsGrid">
+                    <!-- Los PDFs se cargarán dinámicamente aquí -->
+                </div>
+
+                <!-- Paginación -->
+                <div class="pagination" id="pagination">
+                    <button class="pagination-btn" onclick="previousPage()" id="prevBtn">‹</button>
+                    <button class="pagination-btn active" onclick="goToPage(1)">1</button>
+                    <button class="pagination-btn" onclick="goToPage(2)">2</button>
+                    <button class="pagination-btn" onclick="nextPage()" id="nextBtn">›</button>
+                </div>
+            </div>
+
+            <!-- Botón Volver -->
+            <div class="consultar-footer">
+                <button class="btn-back" onclick="goBackFromConsultar()">← Volver al Inicio</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Empezamos -->
+    <div id="empezamosScreen" class="empezamos-screen hidden">
+        <div class="empezamos-container">
+            <!-- Avatar de la persona con papelera (solo admin) -->
+            <div
+                style="position: relative; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
+                <div class="person-avatar">
+                    👤
+                </div>
+                <!-- Papelera (solo visible para admin) -->
+                <button id="deletePersonBtn" class="delete-person-btn hidden" onclick="deleteCurrentPerson()"
+                    title="Eliminar persona">
+                    🗑️
+                </button>
+            </div>
+
+            <!-- Formulario de la persona -->
+            <div class="person-form">
+                <div class="person-field">
+                    <label class="person-label">Nombre de la persona:</label>
+                    <input type="text" id="empezamosPersonName" class="person-input" placeholder="Nueva Persona"
+                        onchange="saveCurrentPersonData()" oninput="autoSavePersonData()">
+                </div>
+
+                <div class="person-field">
+                    <label class="person-label">Nombre de la empresa:</label>
+                    <input type="text" id="empezamosPersonCompany" class="person-input" placeholder="Sin empresa"
+                        onchange="saveCurrentPersonData()" oninput="autoSavePersonData()">
+                </div>
+
+                <div class="person-field">
+                    <label class="person-label">Peticiones:</label>
+                    <textarea id="empezamosPersonPetitions" class="person-textarea"
+                        placeholder="Escribe aquí las peticiones..." onchange="saveCurrentPersonData()"
+                        oninput="autoSavePersonData()"></textarea>
+                </div>
+            </div>
+
+            <!-- Separador -->
+            <div class="person-separator"></div>
+
+            <!-- Navegación -->
+            <div class="person-navigation">
+                <button id="btnAnterior" class="nav-btn btn-anterior" onclick="previousPersonEmpezamos()" disabled>
+                    ← Anterior
+                </button>
+                <button id="btnSiguiente" class="nav-btn btn-siguiente" onclick="nextPersonEmpezamos()">
+                    Siguiente →
+                </button>
+            </div>
+
+            <!-- Contador de persona -->
+            <div class="person-counter" id="empezamosPersonCounter">
+                Persona 1 de 1
+            </div>
+
+            <!-- Botón volver al inicio -->
+            <div class="empezamos-footer">
+                <button class="btn-inicio" onclick="goBackFromEmpezamos()">
+                    🏠 Inicio
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla Final de Proceso Completado -->
+    <div id="finalScreen" class="final-screen hidden">
+        <div class="final-container">
+            <!-- Header -->
+            <div class="final-header">
+                <div class="final-title">
+                    🎉 ¡Proceso Completado!
+                </div>
+                <div class="final-subtitle">
+                    Has revisado todas las personas. Ahora puedes descargar el reporte en PDF.
+                </div>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number" id="finalTotalPersonas">0</div>
+                    <div class="stat-label">Total Personas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="finalConPeticiones">0</div>
+                    <div class="stat-label">Con Peticiones</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="finalSinPeticiones">0</div>
+                    <div class="stat-label">Sin Peticiones</div>
+                </div>
+            </div>
+
+            <!-- Opciones de PDF -->
+            <div class="pdf-options">
+                <h3>🎯 Selecciona qué incluir en el PDF:</h3>
+                <div class="filter-options">
+                    <div class="filter-option selected" data-filter="all" onclick="selectFinalFilter('all')">
+                        👥 Todas las Personas
+                    </div>
+                    <div class="filter-option" data-filter="with-peticiones"
+                        onclick="selectFinalFilter('with-peticiones')">
+                        📝 Solo con Peticiones
+                    </div>
+                </div>
+
+                <button class="btn-download-final" onclick="generateFinalPdf()">
+                    📊 Descargar PDF
+                </button>
+            </div>
+
+            <!-- Sección de guardar en base de datos (solo admin) -->
+            <div id="adminSaveSection" class="admin-save-section hidden">
+                <input type="checkbox" id="saveToConsultasCheckbox" class="admin-checkbox" checked>
+                <label for="saveToConsultasCheckbox">💾 Guardar también en la base de datos para consultas
+                    futuras</label>
+            </div>
+
+            <!-- Navegación -->
+            <div class="final-navigation">
+                <button class="btn-back-final" onclick="goBackToEmpezamos()">
+                    ← Volver Atrás
+                </button>
+                <button class="btn-discard" onclick="discardChanges()">
+                    🗑️ Descartar
+                </button>
+                <button class="btn-home-final" onclick="goBackHomeFromFinal()">
+                    🏠 Volver al Inicio
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Variables globales
+        let isAdminLoggedIn = true; // Siempre activo - sin login requerido
+
+        // Inicialización
+        document.addEventListener('DOMContentLoaded', function () {
+            checkAdminStatus();
+            loadLogoOnStartup();
+            console.log('🎉 GenPeticiones iniciado correctamente');
+        });
+
+        // Configurar interfaz de administrador (siempre activa)
+        function checkAdminStatus() {
+            // Admin siempre activo - sin login requerido
+            isAdminLoggedIn = true;
+
+            const logoEditBtn = document.getElementById('logoEditBtn');
+            const adminIcon = document.getElementById('adminIcon');
+            const adminTitle = document.getElementById('adminTitle');
+            const adminSubtitle = document.getElementById('adminSubtitle');
+
+            // Mostrar siempre como admin conectado
+            logoEditBtn.classList.remove('hidden');
+            adminIcon.textContent = '✅';
+            adminTitle.textContent = 'ADMIN';
+            adminSubtitle.textContent = 'CONECTADO';
+        }
+
+        // Acceso directo al panel de administrador (sin login)
+        // Ya no se necesitan funciones de login
+
+        // Variables para edición de logo
+        let currentLogoSize = 160; // Altura del círculo del logo (optimizado para móvil)
+        let currentLogoImage = null;
+        let hasCustomLogo = false;
+
+        // Editar logo (solo para administradores)
+        function editLogo() {
+            if (!isAdminLoggedIn) {
+                alert('❌ Solo los administradores pueden editar el logo');
+                return;
+            }
+
+            // Cargar configuración actual del logo
+            loadCurrentLogoSettings();
+            document.getElementById('logoModal').classList.remove('hidden');
+        }
+
+        // Cargar configuración actual del logo
+        function loadCurrentLogoSettings() {
+            const savedSize = localStorage.getItem('gen_logo_size');
+            const savedImage = localStorage.getItem('gen_logo_image');
+
+            if (savedSize) {
+                currentLogoSize = parseInt(savedSize);
+                document.getElementById('logoSizeSlider').value = currentLogoSize;
+                updateLogoSize(currentLogoSize);
+            }
+
+            if (savedImage) {
+                currentLogoImage = savedImage;
+                hasCustomLogo = true;
+                updateLogoPreview();
+            }
+        }
+
+        // Actualizar tamaño del logo
+        function updateLogoSize(size) {
+            currentLogoSize = parseInt(size);
+            document.getElementById('logoSizeValue').textContent = size + 'px';
+
+            const logoPreview = document.getElementById('logoPreview');
+
+            // Mantener el ancho completo del contenedor, solo cambiar altura
+            logoPreview.style.width = '280px'; // Ancho fijo para mantener proporción
+            logoPreview.style.height = (size + 40) + 'px'; // Altura + padding
+
+            // Actualizar el círculo del logo en la vista previa
+            const logoCircle = logoPreview.querySelector('.logo-circle');
+            if (logoCircle) {
+                logoCircle.style.width = size + 'px';
+                logoCircle.style.height = size + 'px';
+
+                // Ajustar borde proporcionalmente
+                const borderWidth = Math.max(8, Math.round(size * 0.067)); // 12px para 180px
+                logoCircle.style.borderWidth = borderWidth + 'px';
+
+                // Ajustar barras verdes proporcionalmente
+                const barWidth = Math.round(size * 0.44); // 80px para 180px
+                const barHeight = Math.max(8, Math.round(size * 0.067)); // 12px para 180px
+                const barTop = Math.round(size * 0.167); // 30px para 180px
+
+                logoCircle.style.setProperty('--bar-width', barWidth + 'px');
+                logoCircle.style.setProperty('--bar-height', barHeight + 'px');
+                logoCircle.style.setProperty('--bar-top', barTop + 'px');
+            }
+
+            // Ajustar tamaño del texto proporcionalmente
+            const logoGen = logoPreview.querySelector('.logo-gen');
+            if (logoGen) {
+                const fontSize = (size / 160) * 3.1; // Escala basada en el tamaño original 160px
+                logoGen.style.fontSize = fontSize + 'rem';
+            }
+        }
+
+        // Manejar subida de logo
+        function handleLogoUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            // Validar tipo de archivo
+            if (!file.type.match(/^image\/(jpeg|jpg|png)$/)) {
+                alert('❌ Solo se permiten archivos JPG y PNG');
+                input.value = '';
+                return;
+            }
+
+            // Validar tamaño (2MB máximo)
+            if (file.size > 2 * 1024 * 1024) {
+                alert('❌ El archivo es demasiado grande. Máximo 2MB');
+                input.value = '';
+                return;
+            }
+
+            // Leer archivo como base64
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                currentLogoImage = e.target.result;
+                hasCustomLogo = true;
+                updateLogoPreview();
+                console.log('📁 Logo cargado correctamente');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Actualizar vista previa del logo
+        function updateLogoPreview() {
+            const logoPreview = document.getElementById('logoPreview');
+
+            if (hasCustomLogo && currentLogoImage) {
+                logoPreview.innerHTML = `<img src="${currentLogoImage}" style="width: 100%; height: 100%; object-fit: contain; border-radius: 15px;">`;
+            } else {
+                // Restaurar logo original con variables CSS
+                const borderWidth = Math.max(8, Math.round(currentLogoSize * 0.067));
+                const barWidth = Math.round(currentLogoSize * 0.44);
+                const barHeight = Math.max(8, Math.round(currentLogoSize * 0.067));
+                const barTop = Math.round(currentLogoSize * 0.167);
+                const fontSize = (currentLogoSize / 160) * 3.1;
+
+                logoPreview.innerHTML = `
+                    <div class="logo-container" style="width: 100%; max-width: none;">
+                        <div class="logo-circle" style="
+                            --logo-size: ${currentLogoSize}px;
+                            --logo-border: ${borderWidth}px;
+                            --bar-width: ${barWidth}px;
+                            --bar-height: ${barHeight}px;
+                            --bar-top: ${barTop}px;
+                        ">
+                            <div class="logo-gen" style="font-size: ${fontSize}rem;">
+                                <span class="g">G</span><span class="e">E</span><span class="n">N</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Guardar cambios del logo
+        function saveLogoChanges() {
+            try {
+                // Guardar tamaño
+                localStorage.setItem('gen_logo_size', currentLogoSize.toString());
+
+                // Guardar imagen si hay una personalizada
+                if (hasCustomLogo && currentLogoImage) {
+                    localStorage.setItem('gen_logo_image', currentLogoImage);
+                    localStorage.setItem('gen_has_custom_logo', 'true');
+                } else {
+                    localStorage.removeItem('gen_logo_image');
+                    localStorage.setItem('gen_has_custom_logo', 'false');
+                }
+
+                // Aplicar cambios al logo principal
+                applyLogoChanges();
+
+                // Cerrar modal
+                closeLogoModal();
+
+                alert('✅ Logo actualizado correctamente');
+                console.log('💾 Configuración del logo guardada');
+
+            } catch (e) {
+                alert('❌ Error al guardar los cambios del logo');
+                console.error('Error:', e);
+            }
+        }
+
+        // Aplicar cambios al logo principal
+        function applyLogoChanges() {
+            const logoSection = document.querySelector('.logo-section');
+            const logoContainer = logoSection.querySelector('.logo-container');
+
+            // Limitar el tamaño a valores seguros para móvil
+            const maxSafeSize = 160; // Tamaño máximo seguro
+            const safeSize = Math.min(Math.max(currentLogoSize, 120), maxSafeSize);
+
+            if (hasCustomLogo && currentLogoImage) {
+                // Reemplazar con imagen personalizada manteniendo límites estrictos
+                logoContainer.innerHTML = `
+                    <div style="
+                        width: ${safeSize}px; 
+                        height: ${safeSize}px; 
+                        max-width: 100%; 
+                        max-height: 100%; 
+                        display: flex; 
+                        align-items: center; 
+                        justify-content: center;
+                        margin: 0 auto;
+                        overflow: hidden;
+                    ">
+                        <img src="${currentLogoImage}" style="
+                            max-width: 100%; 
+                            max-height: 100%; 
+                            object-fit: contain;
+                            width: auto;
+                            height: auto;
+                        ">
+                    </div>
+                `;
+            } else {
+                // Actualizar logo original con tamaño controlado
+                logoContainer.innerHTML = `
+                    <div class="logo-circle" style="
+                        --logo-size: ${safeSize}px;
+                        --logo-border: ${Math.max(8, Math.round(safeSize * 0.067))}px;
+                        --bar-width: ${Math.round(safeSize * 0.44)}px;
+                        --bar-height: ${Math.max(8, Math.round(safeSize * 0.067))}px;
+                        --bar-top: ${Math.round(safeSize * 0.167)}px;
+                        width: ${safeSize}px !important;
+                        height: ${safeSize}px !important;
+                        max-width: 100% !important;
+                        max-height: 100% !important;
+                        margin: 0 auto;
+                        flex-shrink: 0;
+                    ">
+                        <div class="logo-gen" style="font-size: ${(safeSize / 160) * 3.1}rem; line-height: 1;">
+                            <span class="g">G</span><span class="e">E</span><span class="n">N</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Asegurar que el botón de edición esté presente
+            if (isAdminLoggedIn) {
+                let editBtn = logoSection.querySelector('#logoEditBtn');
+                if (!editBtn) {
+                    editBtn = document.createElement('button');
+                    editBtn.id = 'logoEditBtn';
+                    editBtn.className = 'logo-edit-btn';
+                    editBtn.onclick = editLogo;
+                    editBtn.title = 'Editar logo';
+                    editBtn.textContent = '✏️';
+                    logoSection.appendChild(editBtn);
+                }
+            }
+        }
+
+        // Restaurar logo original
+        function resetLogo() {
+            if (confirm('¿Estás seguro de que quieres restaurar el logo original?')) {
+                currentLogoImage = null;
+                hasCustomLogo = false;
+                currentLogoSize = 160;
+
+                // Actualizar controles
+                document.getElementById('logoSizeSlider').value = 160;
+                document.getElementById('logoFileInput').value = '';
+                updateLogoSize(160);
+                updateLogoPreview();
+
+                console.log('🔄 Logo restaurado a valores originales');
+            }
+        }
+
+        // Cerrar modal de edición de logo
+        function closeLogoModal() {
+            document.getElementById('logoModal').classList.add('hidden');
+            document.getElementById('logoFileInput').value = '';
+        }
+
+        // Cargar configuración del logo al iniciar
+        function loadLogoOnStartup() {
+            const savedSize = localStorage.getItem('gen_logo_size');
+            const savedImage = localStorage.getItem('gen_logo_image');
+            const hasCustom = localStorage.getItem('gen_has_custom_logo') === 'true';
+
+            if (savedSize) {
+                currentLogoSize = parseInt(savedSize);
+            }
+
+            if (hasCustom && savedImage) {
+                currentLogoImage = savedImage;
+                hasCustomLogo = true;
+                applyLogoChanges();
+            }
+        }
+
+        // Ir a consultar peticiones
+        function goToConsultar() {
+            showConsultarScreen();
+        }
+
+        // Ir a empezamos
+        function goToEmpezamos() {
+            showEmpezamosScreen();
+        }
+
+        // Cerrar modal con ESC
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closeAdminModal();
+            }
+        });
+
+        // Cerrar modal al hacer clic fuera
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('modal')) {
+                closeAdminModal();
+            }
+        });
+
+        // ===== FUNCIONES DEL PANEL DE ADMINISTRACIÓN =====
+
+        // Mostrar panel de administración
+        function showAdminPanel() {
+            document.getElementById('adminPanel').classList.remove('hidden');
+            loadAdminData();
+        }
+
+        // Cargar datos del administrador
+        function loadAdminData() {
+            const currentUser = localStorage.getItem('gen_admin_user') || 'admin';
+            document.getElementById('adminStatusUser').textContent = currentUser;
+            document.getElementById('currentUser').value = currentUser;
+        }
+
+        // Cambiar contraseña
+        function changePassword() {
+            const currentPass = document.getElementById('currentPassword').value;
+            const newPass = document.getElementById('newPassword').value;
+            const confirmPass = document.getElementById('confirmPassword').value;
+
+            if (!currentPass || !newPass || !confirmPass) {
+                alert('❌ Por favor, completa todos los campos');
+                return;
+            }
+
+            const storedPassword = localStorage.getItem('gen_admin_password') || '123456';
+            if (currentPass !== storedPassword) {
+                alert('❌ La contraseña actual es incorrecta');
+                return;
+            }
+
+            if (newPass !== confirmPass) {
+                alert('❌ Las contraseñas no coinciden');
+                return;
+            }
+
+            if (newPass.length < 4) {
+                alert('❌ La contraseña debe tener al menos 4 caracteres');
+                return;
+            }
+
+            localStorage.setItem('gen_admin_password', newPass);
+            document.getElementById('currentPassword').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('confirmPassword').value = '';
+
+            alert('✅ Contraseña cambiada correctamente');
+        }
+
+        // Cambiar nombre de usuario
+        function changeUsername() {
+            const currentPass = document.getElementById('currentPasswordUser').value;
+            const newUser = document.getElementById('newUser').value;
+
+            if (!currentPass || !newUser) {
+                alert('❌ Por favor, completa todos los campos');
+                return;
+            }
+
+            const storedPassword = localStorage.getItem('gen_admin_password') || '123456';
+            if (currentPass !== storedPassword) {
+                alert('❌ La contraseña actual es incorrecta');
+                return;
+            }
+
+            if (newUser.length < 3) {
+                alert('❌ El nombre de usuario debe tener al menos 3 caracteres');
+                return;
+            }
+
+            localStorage.setItem('gen_admin_user', newUser);
+            document.getElementById('currentPasswordUser').value = '';
+            document.getElementById('newUser').value = '';
+            document.getElementById('currentUser').value = newUser;
+            document.getElementById('adminStatusUser').textContent = newUser;
+
+            alert('✅ Nombre de usuario cambiado correctamente');
+        }
+
+        // Manejar drag and drop
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.currentTarget.classList.add('dragover');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('dragover');
+
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleDatabaseUpload({ files: files });
+            }
+        }
+
+        // Manejar subida de base de datos
+        function handleDatabaseUpload(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            // Validar tipo de archivo
+            const validTypes = ['text/plain', 'text/csv', 'application/json'];
+            if (!validTypes.includes(file.type) && !file.name.match(/\.(txt|csv|json)$/i)) {
+                alert('❌ Solo se permiten archivos TXT, CSV y JSON');
+                return;
+            }
+
+            // Validar tamaño (5MB máximo)
+            if (file.size > 5 * 1024 * 1024) {
+                alert('❌ El archivo es demasiado grande. Máximo 5MB');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                try {
+                    const content = e.target.result;
+                    const extension = file.name.split('.').pop().toLowerCase();
+
+                    let personas = [];
+
+                    if (extension === 'txt') {
+                        personas = parseTxtFile(content);
+                    } else if (extension === 'csv') {
+                        personas = parseCsvFile(content);
+                    } else if (extension === 'json') {
+                        personas = parseJsonFile(content);
+                    }
+
+                    if (personas.length > 0) {
+                        // Sustituir completamente la base de datos anterior
+                        localStorage.setItem('gen_personas_data', JSON.stringify(personas));
+                        alert(`✅ Base de datos sustituida correctamente: ${personas.length} personas importadas\n\n⚠️ La base de datos anterior ha sido reemplazada completamente.`);
+                        console.log('📊 Base de datos sustituida con:', personas);
+                    } else {
+                        alert('❌ No se pudieron importar datos del archivo');
+                    }
+
+                } catch (error) {
+                    alert('❌ Error al procesar el archivo: ' + error.message);
+                    console.error('Error:', error);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Parsear archivo TXT
+        function parseTxtFile(content) {
+            const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+            const personas = [];
+
+            for (let i = 0; i < lines.length; i += 2) {
+                if (lines[i] && lines[i + 1]) {
+                    personas.push({
+                        id: Date.now() + i,
+                        nombre: lines[i],
+                        empresa: lines[i + 1],
+                        peticiones: ''
+                    });
+                }
+            }
+
+            return personas;
+        }
+
+        // Parsear archivo CSV
+        function parseCsvFile(content) {
+            const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+            const personas = [];
+
+            // Saltar la primera línea si parece ser un header
+            const startIndex = lines[0].toLowerCase().includes('nombre') ? 1 : 0;
+
+            for (let i = startIndex; i < lines.length; i++) {
+                const columns = lines[i].split(',').map(col => col.trim().replace(/"/g, ''));
+                if (columns.length >= 2) {
+                    personas.push({
+                        id: Date.now() + i,
+                        nombre: columns[0] || 'Sin nombre',
+                        empresa: columns[1] || 'Sin empresa',
+                        peticiones: columns[2] || ''
+                    });
+                }
+            }
+
+            return personas;
+        }
+
+        // Parsear archivo JSON
+        function parseJsonFile(content) {
+            const data = JSON.parse(content);
+            const personas = [];
+
+            if (Array.isArray(data)) {
+                data.forEach((item, index) => {
+                    personas.push({
+                        id: Date.now() + index,
+                        nombre: item.nombre || item.name || 'Sin nombre',
+                        empresa: item.empresa || item.company || 'Sin empresa',
+                        peticiones: item.peticiones || item.requests || ''
+                    });
+                });
+            }
+
+            return personas;
+        }
+
+        // Añadir nuevo miembro
+        function addNewMember() {
+            const name = document.getElementById('memberName').value.trim();
+            const company = document.getElementById('memberCompany').value.trim();
+            const petitions = document.getElementById('memberPetitions').value.trim();
+
+            if (!name || !company) {
+                alert('❌ Por favor, completa al menos el nombre y la empresa');
+                return;
+            }
+
+            // Cargar personas existentes
+            let personas = [];
+            try {
+                const saved = localStorage.getItem('gen_personas_data');
+                if (saved) {
+                    personas = JSON.parse(saved);
+                }
+            } catch (e) {
+                personas = [];
+            }
+
+            // Añadir nuevo miembro
+            const newMember = {
+                id: Date.now(),
+                nombre: name,
+                empresa: company,
+                peticiones: petitions
+            };
+
+            personas.push(newMember);
+
+            // Guardar en localStorage
+            localStorage.setItem('gen_personas_data', JSON.stringify(personas));
+
+            // Limpiar formulario
+            clearMemberForm();
+
+            alert(`✅ Miembro añadido correctamente: ${name}`);
+            console.log('👥 Nuevo miembro añadido:', newMember);
+        }
+
+        // Limpiar formulario de miembro
+        function clearMemberForm() {
+            document.getElementById('memberName').value = '';
+            document.getElementById('memberCompany').value = '';
+            document.getElementById('memberPetitions').value = '';
+        }
+
+        // Volver al inicio
+        function goBackHome() {
+            document.getElementById('adminPanel').classList.add('hidden');
+        }
+
+        // Función de logout eliminada - ya no se necesita login
+
+        // ===== FUNCIONES DE CONSULTAR PETICIONES =====
+
+        // Variables para consultar peticiones
+        let allPdfs = [];
+        let filteredPdfs = [];
+        let currentPage = 1;
+        const pdfsPerPage = 6; // Aumentamos a 6 ya que ahora es una columna
+
+        // Mostrar pantalla de consultar peticiones
+        function showConsultarScreen() {
+            document.getElementById('consultarScreen').classList.remove('hidden');
+            initializePdfs();
+            loadPdfs();
+
+            // Si no hay PDFs, mostrar mensaje informativo
+            if (allPdfs.length === 0) {
+                showNoPdfsMessage();
+            }
+        }
+
+        // Mostrar mensaje cuando no hay PDFs
+        function showNoPdfsMessage() {
+            const grid = document.getElementById('pdfsGrid');
+            grid.innerHTML = `
+                <div style="text-align: center; padding: 40px 20px; color: #666;">
+                    <div style="font-size: 3rem; margin-bottom: 15px;">📄</div>
+                    <h3 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; color: #333;">No hay PDFs guardados</h3>
+                    <p style="font-size: 0.9rem; line-height: 1.5;">Los PDFs que generes desde "Empezamos" aparecerán aquí para consulta y descarga.</p>
+                    <div style="margin-top: 20px;">
+                        <button onclick="goBackFromConsultar()" style="background: #A4C639; color: white; border: none; padding: 10px 20px; border-radius: 10px; font-weight: 600; cursor: pointer;">
+                            ⭐ Ir a Empezamos
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Inicializar PDFs (solo los realmente guardados)
+        function initializePdfs() {
+            // Cargar solo PDFs realmente guardados desde localStorage
+            const savedPdfs = localStorage.getItem('gen_saved_pdfs');
+            if (savedPdfs) {
+                try {
+                    allPdfs = JSON.parse(savedPdfs);
+                    console.log('📊 PDFs cargados desde localStorage:', allPdfs.length);
+                } catch (e) {
+                    console.log('Error cargando PDFs guardados:', e);
+                    allPdfs = [];
+                }
+            } else {
+                allPdfs = [];
+                console.log('📊 No hay PDFs guardados - empezando con lista vacía');
+            }
+
+            filteredPdfs = [...allPdfs];
+        }
+
+        // Cargar y mostrar PDFs
+        function loadPdfs() {
+            updateDateFilter();
+            updatePdfCount();
+            displayPdfs();
+            updatePagination();
+        }
+
+        // Actualizar filtro de fechas dinámicamente
+        function updateDateFilter() {
+            const dateFilter = document.getElementById('dateFilter');
+            const currentValue = dateFilter.value;
+
+            // Obtener fechas únicas de todos los PDFs
+            const uniqueDates = [...new Set(allPdfs.map(pdf => pdf.date))].sort().reverse();
+
+            // Limpiar opciones existentes
+            dateFilter.innerHTML = '<option value="all">Todas las fechas</option>';
+
+            // Añadir opciones dinámicamente
+            uniqueDates.forEach(date => {
+                const option = document.createElement('option');
+                option.value = date;
+                option.textContent = new Date(date).toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric'
+                });
+                dateFilter.appendChild(option);
+            });
+
+            // Restaurar valor seleccionado si existe
+            if (currentValue && uniqueDates.includes(currentValue)) {
+                dateFilter.value = currentValue;
+            }
+        }
+
+        // Actualizar contador de PDFs
+        function updatePdfCount() {
+            document.getElementById('pdfCount').textContent = `${filteredPdfs.length} PDF${filteredPdfs.length !== 1 ? 's' : ''}`;
+        }
+
+        // Mostrar PDFs en la página actual
+        function displayPdfs() {
+            const startIndex = (currentPage - 1) * pdfsPerPage;
+            const endIndex = startIndex + pdfsPerPage;
+            const pdfsToShow = filteredPdfs.slice(startIndex, endIndex);
+
+            const grid = document.getElementById('pdfsGrid');
+            grid.innerHTML = '';
+
+            pdfsToShow.forEach(pdf => {
+                const pdfElement = document.createElement('div');
+                pdfElement.className = 'pdf-item';
+                pdfElement.innerHTML = `
+                    <div class="pdf-name">${pdf.name}</div>
+                    <div class="pdf-date">${pdf.formattedDate}</div>
+                    <div class="pdf-info">
+                        <strong>Tipo:</strong> ${pdf.type}<br>
+                        <strong>Registros:</strong> ${pdf.records}<br>
+                        <strong>Tamaño:</strong> ${pdf.size}
+                    </div>
+                    <div class="pdf-buttons">
+                        <button class="btn-download" onclick="downloadPdf('${pdf.id}')">📥 Descargar</button>
+                        ${isAdminLoggedIn ? `<button class="btn-delete" onclick="deletePdf('${pdf.id}')">🗑️ Eliminar</button>` : ''}
+                    </div>
+                `;
+                grid.appendChild(pdfElement);
+            });
+        }
+
+        // Filtrar PDFs por fecha
+        function filterPdfs() {
+            const selectedDate = document.getElementById('dateFilter').value;
+
+            if (selectedDate === 'all') {
+                filteredPdfs = [...allPdfs];
+            } else {
+                filteredPdfs = allPdfs.filter(pdf => pdf.date === selectedDate);
+            }
+
+            currentPage = 1;
+            loadPdfs();
+        }
+
+        // Actualizar paginación
+        function updatePagination() {
+            const totalPages = Math.ceil(filteredPdfs.length / pdfsPerPage);
+            const pagination = document.getElementById('pagination');
+
+            pagination.innerHTML = '';
+
+            // Botón anterior
+            const prevBtn = document.createElement('button');
+            prevBtn.className = 'pagination-btn';
+            prevBtn.innerHTML = '‹';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.onclick = previousPage;
+            pagination.appendChild(prevBtn);
+
+            // Botones de página
+            for (let i = 1; i <= Math.min(totalPages, 3); i++) {
+                const pageBtn = document.createElement('button');
+                pageBtn.className = `pagination-btn ${i === currentPage ? 'active' : ''}`;
+                pageBtn.innerHTML = i;
+                pageBtn.onclick = () => goToPage(i);
+                pagination.appendChild(pageBtn);
+            }
+
+            // Botón siguiente
+            const nextBtn = document.createElement('button');
+            nextBtn.className = 'pagination-btn';
+            nextBtn.innerHTML = '›';
+            nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+            nextBtn.onclick = nextPage;
+            pagination.appendChild(nextBtn);
+        }
+
+        // Navegación de páginas
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPdfs();
+                updatePagination();
+            }
+        }
+
+        function nextPage() {
+            const totalPages = Math.ceil(filteredPdfs.length / pdfsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                displayPdfs();
+                updatePagination();
+            }
+        }
+
+        function goToPage(page) {
+            currentPage = page;
+            displayPdfs();
+            updatePagination();
+        }
+
+        // Descargar PDF
+        function downloadPdf(pdfId) {
+            const pdf = allPdfs.find(p => p.id == pdfId);
+            if (!pdf) {
+                alert('❌ PDF no encontrado');
+                return;
+            }
+
+            // Generar contenido del PDF basado en los datos guardados
+            let personas = [];
+            try {
+                const saved = localStorage.getItem('gen_personas_data');
+                if (saved) {
+                    personas = JSON.parse(saved);
+                }
+            } catch (e) {
+                personas = [];
+            }
+
+            // Si no hay personas, crear datos de muestra
+            if (personas.length === 0) {
+                personas = [
+                    { nombre: 'Juan Pérez', empresa: 'Tech Solutions', peticiones: 'Mejoras en el sistema de facturación' },
+                    { nombre: 'María García', empresa: 'Innovate Corp', peticiones: 'Implementar nuevas funcionalidades' },
+                    { nombre: 'Carlos López', empresa: 'Digital Works', peticiones: 'Optimización de procesos' },
+                    { nombre: 'Ana Martínez', empresa: 'Creative Agency', peticiones: 'Diseño de nueva interfaz' },
+                    { nombre: 'Pedro Rodríguez', empresa: 'Data Systems', peticiones: 'Análisis de datos avanzado' }
+                ];
+            }
+
+            try {
+                // Crear nuevo documento PDF usando jsPDF
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                // Configurar fuente y colores
+                doc.setFont('helvetica');
+
+                // Header del documento
+                doc.setFontSize(20);
+                doc.setTextColor(114, 47, 55); // Color granate
+                doc.text('REPORTE DE PETICIONES', 20, 25);
+
+                doc.setFontSize(14);
+                doc.setTextColor(164, 198, 57); // Color verde
+                doc.text(pdf.type.toUpperCase(), 20, 35);
+
+                // Información del reporte
+                doc.setFontSize(10);
+                doc.setTextColor(0, 0, 0);
+                doc.text(`Generado: ${pdf.formattedDate}`, 20, 50);
+                doc.text(`Archivo: ${pdf.name}`, 20, 55);
+
+                // Línea separadora
+                doc.setDrawColor(164, 198, 57);
+                doc.setLineWidth(1);
+                doc.line(20, 65, 190, 65);
+
+                // Estadísticas
+                doc.setFontSize(12);
+                doc.setTextColor(114, 47, 55);
+                doc.text('ESTADISTICAS:', 20, 80);
+
+                doc.setFontSize(10);
+                doc.setTextColor(0, 0, 0);
+                doc.text(`• Total de registros: ${pdf.records}`, 25, 90);
+                doc.text(`• Tipo de reporte: ${pdf.type}`, 25, 95);
+                doc.text(`• Tamaño del archivo: ${pdf.size}`, 25, 100);
+
+                // Detalle de personas
+                doc.setFontSize(12);
+                doc.setTextColor(114, 47, 55);
+                doc.text('DETALLE DE PERSONAS:', 20, 115);
+
+                // Tomar una muestra de personas según el tipo de reporte
+                let sampleSize = Math.min(personas.length, Math.floor(pdf.records / 10));
+                if (sampleSize === 0) sampleSize = Math.min(personas.length, 5);
+
+                let yPosition = 125;
+                doc.setFontSize(9);
+                doc.setTextColor(0, 0, 0);
+
+                for (let i = 0; i < sampleSize && yPosition < 250; i++) {
+                    const person = personas[i % personas.length];
+
+                    // Verificar si necesitamos una nueva página
+                    if (yPosition > 250) {
+                        doc.addPage();
+                        yPosition = 20;
+                    }
+
+                    // Nombre (en negrita)
+                    doc.setFont('helvetica', 'bold');
+                    doc.text(`${i + 1}. ${person.nombre}`, 25, yPosition);
+                    yPosition += 5;
+
+                    // Empresa
+                    doc.setFont('helvetica', 'normal');
+                    doc.text(`   Empresa: ${person.empresa}`, 25, yPosition);
+                    yPosition += 5;
+
+                    // Peticiones (si aplica según el tipo de reporte)
+                    if (pdf.type !== 'Solo Empresas') {
+                        const peticiones = person.peticiones || 'Sin peticiones específicas';
+                        // Dividir texto largo en múltiples líneas
+                        const lines = doc.splitTextToSize(`   Peticiones: ${peticiones}`, 160);
+                        doc.text(lines, 25, yPosition);
+                        yPosition += lines.length * 5;
+                    }
+
+                    yPosition += 3; // Espacio entre personas
+                }
+
+                // Resumen al final
+                if (yPosition > 240) {
+                    doc.addPage();
+                    yPosition = 20;
+                }
+
+                doc.setFontSize(12);
+                doc.setTextColor(114, 47, 55);
+                doc.text('RESUMEN:', 20, yPosition + 10);
+
+                doc.setFontSize(9);
+                doc.setTextColor(0, 0, 0);
+                const resumenText = `Este reporte contiene ${sampleSize} registros de muestra del total de ${pdf.records} registros disponibles.`;
+                const resumenLines = doc.splitTextToSize(resumenText, 160);
+                doc.text(resumenLines, 20, yPosition + 20);
+
+                doc.text('Generado por GenPeticiones - Sistema de Gestión de Peticiones', 20, yPosition + 30);
+
+                // Footer con fecha y hora
+                const now = new Date();
+                doc.setFontSize(8);
+                doc.setTextColor(128, 128, 128);
+                doc.text(`Generado el ${now.toLocaleString('es-ES')}`, 20, 285);
+
+                // Descargar el PDF
+                doc.save(`${pdf.name}.pdf`);
+
+                alert(`✅ PDF descargado: ${pdf.name}.pdf`);
+                console.log('📥 PDF descargado:', pdf.name);
+
+            } catch (e) {
+                alert('❌ Error al generar el PDF: ' + e.message);
+                console.error('Error:', e);
+            }
+        }
+
+        // Eliminar PDF (solo admin)
+        function deletePdf(pdfId) {
+            if (!isAdminLoggedIn) {
+                alert('❌ Solo los administradores pueden eliminar PDFs');
+                return;
+            }
+
+            const pdf = allPdfs.find(p => p.id == pdfId);
+            if (!pdf) {
+                alert('❌ PDF no encontrado');
+                return;
+            }
+
+            if (confirm(`¿Estás seguro de que quieres eliminar "${pdf.name}"?`)) {
+                // Eliminar de todas las listas
+                allPdfs = allPdfs.filter(p => p.id != pdfId);
+                filteredPdfs = filteredPdfs.filter(p => p.id != pdfId);
+
+                // Actualizar localStorage con todos los PDFs restantes
+                localStorage.setItem('gen_saved_pdfs', JSON.stringify(allPdfs));
+
+                // Recargar vista
+                loadPdfs();
+
+                alert(`✅ PDF eliminado: ${pdf.name}`);
+                console.log('🗑️ PDF eliminado:', pdf.name);
+            }
+        }
+
+        // Volver al inicio desde consultar
+        function goBackFromConsultar() {
+            document.getElementById('consultarScreen').classList.add('hidden');
+        }
+
+        // ===== FUNCIONES DE EMPEZAMOS =====
+
+        // Variables para empezamos
+        let empezamosPersonas = [];
+        let currentEmpezamosIndex = 0;
+
+        // Mostrar pantalla de empezamos
+        function showEmpezamosScreen() {
+            document.getElementById('empezamosScreen').classList.remove('hidden');
+            // Crear backup de la base de datos original antes de empezar
+            createDataBackup();
+            loadEmpezamosPersonas();
+            updateEmpezamosDisplay();
+        }
+
+        // Crear backup de la base de datos original
+        function createDataBackup() {
+            const currentData = localStorage.getItem('gen_personas_data');
+            if (currentData) {
+                localStorage.setItem('gen_personas_data_backup', currentData);
+                console.log('💾 Backup de datos creado antes de empezar');
+            }
+        }
+
+        // Cargar personas para empezamos
+        function loadEmpezamosPersonas() {
+            try {
+                const saved = localStorage.getItem('gen_personas_data');
+                if (saved) {
+                    empezamosPersonas = JSON.parse(saved);
+                }
+            } catch (e) {
+                empezamosPersonas = [];
+            }
+
+            // Si no hay personas, crear una por defecto
+            if (!empezamosPersonas || empezamosPersonas.length === 0) {
+                empezamosPersonas = [{
+                    id: Date.now(),
+                    nombre: 'Nueva Persona',
+                    empresa: 'Sin empresa',
+                    peticiones: ''
+                }];
+                saveEmpezamosPersonas();
+            }
+
+            currentEmpezamosIndex = 0;
+        }
+
+        // Guardar personas de empezamos
+        function saveEmpezamosPersonas() {
+            try {
+                localStorage.setItem('gen_personas_data', JSON.stringify(empezamosPersonas));
+                console.log('💾 Personas de empezamos guardadas:', empezamosPersonas.length);
+            } catch (e) {
+                alert('❌ Error al guardar datos');
+            }
+        }
+
+        // Variables para autoguardado
+        let autoSaveTimeout = null;
+        let hasUnsavedChanges = false;
+
+        // Guardar datos de la persona actual
+        function saveCurrentPersonData() {
+            if (empezamosPersonas[currentEmpezamosIndex]) {
+                empezamosPersonas[currentEmpezamosIndex].nombre = document.getElementById('empezamosPersonName').value || 'Nueva Persona';
+                empezamosPersonas[currentEmpezamosIndex].empresa = document.getElementById('empezamosPersonCompany').value || 'Sin empresa';
+                empezamosPersonas[currentEmpezamosIndex].peticiones = document.getElementById('empezamosPersonPetitions').value || '';
+                saveEmpezamosPersonas();
+                hasUnsavedChanges = false;
+            }
+        }
+
+        // Autoguardado en tiempo real (con debounce)
+        function autoSavePersonData() {
+            hasUnsavedChanges = true;
+
+            // Limpiar timeout anterior
+            if (autoSaveTimeout) {
+                clearTimeout(autoSaveTimeout);
+            }
+
+            // Guardar después de 1 segundo de inactividad
+            autoSaveTimeout = setTimeout(() => {
+                saveCurrentPersonData();
+                showAutoSaveIndicator();
+            }, 1000);
+        }
+
+        // Mostrar indicador de autoguardado
+        function showAutoSaveIndicator() {
+            // Crear elemento de indicador
+            const indicator = document.createElement('div');
+            indicator.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #28a745;
+                color: white;
+                padding: 8px 12px;
+                border-radius: 8px;
+                font-size: 12px;
+                font-weight: 600;
+                z-index: 3000;
+                box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            indicator.innerHTML = '💾 Guardado automáticamente';
+
+            document.body.appendChild(indicator);
+
+            // Animar entrada
+            setTimeout(() => {
+                indicator.style.opacity = '1';
+            }, 100);
+
+            // Animar salida y eliminar
+            setTimeout(() => {
+                indicator.style.opacity = '0';
+                setTimeout(() => {
+                    if (indicator.parentNode) {
+                        indicator.parentNode.removeChild(indicator);
+                    }
+                }, 300);
+            }, 2000);
+        }
+
+        // Actualizar visualización de empezamos
+        function updateEmpezamosDisplay() {
+            if (empezamosPersonas[currentEmpezamosIndex]) {
+                const person = empezamosPersonas[currentEmpezamosIndex];
+                document.getElementById('empezamosPersonName').value = person.nombre || 'Nueva Persona';
+                document.getElementById('empezamosPersonCompany').value = person.empresa || 'Sin empresa';
+                document.getElementById('empezamosPersonPetitions').value = person.peticiones || '';
+                document.getElementById('empezamosPersonCounter').textContent = `Persona ${currentEmpezamosIndex + 1} de ${empezamosPersonas.length}`;
+
+                // Mostrar/ocultar botón de eliminar según permisos de admin
+                const deleteBtn = document.getElementById('deletePersonBtn');
+                if (isAdminLoggedIn && empezamosPersonas.length > 1) {
+                    deleteBtn.classList.remove('hidden');
+                } else {
+                    deleteBtn.classList.add('hidden');
+                }
+
+                // Actualizar botones de navegación
+                const btnAnterior = document.getElementById('btnAnterior');
+                const btnSiguiente = document.getElementById('btnSiguiente');
+
+                btnAnterior.disabled = currentEmpezamosIndex === 0;
+
+                if (currentEmpezamosIndex === empezamosPersonas.length - 1) {
+                    btnSiguiente.innerHTML = 'Finalizar →';
+                    btnSiguiente.classList.add('finalizar');
+                } else {
+                    btnSiguiente.innerHTML = 'Siguiente →';
+                    btnSiguiente.classList.remove('finalizar');
+                }
+            }
+        }
+
+        // Navegación anterior en empezamos
+        function previousPersonEmpezamos() {
+            if (currentEmpezamosIndex > 0) {
+                saveCurrentPersonData();
+                currentEmpezamosIndex--;
+                updateEmpezamosDisplay();
+            }
+        }
+
+        // Navegación siguiente en empezamos
+        function nextPersonEmpezamos() {
+            // Guardar automáticamente antes de continuar
+            saveCurrentPersonData();
+
+            // Mostrar confirmación visual de guardado
+            showSaveConfirmation();
+
+            if (currentEmpezamosIndex < empezamosPersonas.length - 1) {
+                currentEmpezamosIndex++;
+                updateEmpezamosDisplay();
+            } else {
+                // Finalizar - mostrar pantalla de resumen
+                showEmpezamosFinalScreen();
+            }
+        }
+
+        // Mostrar confirmación visual de guardado
+        function showSaveConfirmation() {
+            // Crear elemento de confirmación
+            const confirmation = document.createElement('div');
+            confirmation.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #28a745;
+                color: white;
+                padding: 10px 15px;
+                border-radius: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 3000;
+                box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            `;
+            confirmation.innerHTML = '✅ Datos guardados automáticamente';
+
+            document.body.appendChild(confirmation);
+
+            // Animar entrada
+            setTimeout(() => {
+                confirmation.style.transform = 'translateX(0)';
+            }, 100);
+
+            // Animar salida y eliminar
+            setTimeout(() => {
+                confirmation.style.transform = 'translateX(100%)';
+                setTimeout(() => {
+                    if (confirmation.parentNode) {
+                        confirmation.parentNode.removeChild(confirmation);
+                    }
+                }, 300);
+            }, 2000);
+        }
+
+        // Mostrar pantalla final de empezamos
+        function showEmpezamosFinalScreen() {
+            document.getElementById('empezamosScreen').classList.add('hidden');
+            document.getElementById('finalScreen').classList.remove('hidden');
+            updateFinalScreenStats();
+        }
+
+        // Eliminar persona actual (solo admin)
+        function deleteCurrentPerson() {
+            if (!isAdminLoggedIn) {
+                alert('❌ Solo los administradores pueden eliminar personas');
+                return;
+            }
+
+            if (empezamosPersonas.length <= 1) {
+                alert('❌ No se puede eliminar la última persona. Debe haber al menos una persona en la base de datos.');
+                return;
+            }
+
+            const currentPerson = empezamosPersonas[currentEmpezamosIndex];
+            const personName = currentPerson.nombre || 'Nueva Persona';
+
+            if (confirm(`¿Estás seguro de que quieres eliminar a "${personName}"?\n\nEsta acción no se puede deshacer.`)) {
+                // Eliminar la persona del array
+                empezamosPersonas.splice(currentEmpezamosIndex, 1);
+
+                // Ajustar el índice actual si es necesario
+                if (currentEmpezamosIndex >= empezamosPersonas.length) {
+                    currentEmpezamosIndex = empezamosPersonas.length - 1;
+                }
+
+                // Guardar cambios
+                saveEmpezamosPersonas();
+
+                // Actualizar la visualización
+                updateEmpezamosDisplay();
+
+                alert(`✅ Persona eliminada: ${personName}\n\nQuedan ${empezamosPersonas.length} personas en la base de datos.`);
+                console.log('🗑️ Persona eliminada:', personName);
+            }
+        }
+
+        // Volver al inicio desde empezamos
+        function goBackFromEmpezamos() {
+            document.getElementById('empezamosScreen').classList.add('hidden');
+        }
+
+        // ===== FUNCIONES DE PANTALLA FINAL =====
+
+        // Variables para pantalla final
+        let selectedFinalFilter = 'all';
+
+        // Actualizar estadísticas de la pantalla final
+        function updateFinalScreenStats() {
+            const totalPersonas = empezamosPersonas.length;
+            const conPeticiones = empezamosPersonas.filter(p => p.peticiones && p.peticiones.trim()).length;
+            const sinPeticiones = totalPersonas - conPeticiones;
+
+            document.getElementById('finalTotalPersonas').textContent = totalPersonas;
+            document.getElementById('finalConPeticiones').textContent = conPeticiones;
+            document.getElementById('finalSinPeticiones').textContent = sinPeticiones;
+
+            // Mostrar/ocultar sección de admin
+            const adminSection = document.getElementById('adminSaveSection');
+            if (isAdminLoggedIn) {
+                adminSection.classList.remove('hidden');
+            } else {
+                adminSection.classList.add('hidden');
+            }
+        }
+
+        // Seleccionar filtro para PDF final
+        function selectFinalFilter(filter) {
+            selectedFinalFilter = filter;
+            document.querySelectorAll('.filter-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`[data-filter="${filter}"]`).classList.add('selected');
+        }
+
+        // Generar PDF final
+        function generateFinalPdf() {
+            let dataToInclude = empezamosPersonas;
+            let reportType = 'Reporte Completo';
+
+            if (selectedFinalFilter === 'with-peticiones') {
+                dataToInclude = empezamosPersonas.filter(p => p.peticiones && p.peticiones.trim());
+                reportType = 'Solo con Peticiones';
+            }
+
+            if (dataToInclude.length === 0) {
+                alert('❌ No hay datos para generar el reporte con el filtro seleccionado');
+                return;
+            }
+
+            try {
+                // Crear nuevo documento PDF usando jsPDF
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                // Configurar fuente y colores
+                doc.setFont('helvetica');
+
+                // Header del documento
+                doc.setFontSize(20);
+                doc.setTextColor(114, 47, 55); // Color granate
+                doc.text('PROCESO COMPLETADO', 20, 25);
+
+                doc.setFontSize(14);
+                doc.setTextColor(164, 198, 57); // Color verde
+                doc.text(reportType.toUpperCase(), 20, 35);
+
+                // Información del reporte
+                doc.setFontSize(10);
+                doc.setTextColor(0, 0, 0);
+                doc.text(`Generado: ${new Date().toLocaleDateString('es-ES')}`, 20, 50);
+                doc.text(`Total de personas procesadas: ${empezamosPersonas.length}`, 20, 55);
+                doc.text(`Incluidas en este reporte: ${dataToInclude.length}`, 20, 60);
+
+                // Línea separadora
+                doc.setDrawColor(164, 198, 57);
+                doc.setLineWidth(1);
+                doc.line(20, 70, 190, 70);
+
+                // Estadísticas
+                doc.setFontSize(12);
+                doc.setTextColor(114, 47, 55);
+                doc.text('ESTADISTICAS GENERALES:', 20, 85);
+
+                doc.setFontSize(10);
+                doc.setTextColor(0, 0, 0);
+                const totalPersonas = empezamosPersonas.length;
+                const conPeticiones = empezamosPersonas.filter(p => p.peticiones && p.peticiones.trim()).length;
+                const sinPeticiones = totalPersonas - conPeticiones;
+
+                doc.text(`• Total de personas: ${totalPersonas}`, 25, 95);
+                doc.text(`• Con peticiones: ${conPeticiones}`, 25, 100);
+                doc.text(`• Sin peticiones: ${sinPeticiones}`, 25, 105);
+
+                // Detalle de personas
+                doc.setFontSize(12);
+                doc.setTextColor(114, 47, 55);
+                doc.text('DETALLE DE PERSONAS:', 20, 120);
+
+                let yPosition = 130;
+                doc.setFontSize(9);
+                doc.setTextColor(0, 0, 0);
+
+                dataToInclude.forEach((person, index) => {
+                    // Verificar si necesitamos una nueva página
+                    if (yPosition > 250) {
+                        doc.addPage();
+                        yPosition = 20;
+                    }
+
+                    // Nombre (en negrita)
+                    doc.setFont('helvetica', 'bold');
+                    doc.text(`${index + 1}. ${person.nombre}`, 25, yPosition);
+                    yPosition += 5;
+
+                    // Empresa
+                    doc.setFont('helvetica', 'normal');
+                    doc.text(`   Empresa: ${person.empresa}`, 25, yPosition);
+                    yPosition += 5;
+
+                    // Peticiones
+                    if (person.peticiones && person.peticiones.trim()) {
+                        const peticiones = person.peticiones;
+                        const lines = doc.splitTextToSize(`   Peticiones: ${peticiones}`, 160);
+                        doc.text(lines, 25, yPosition);
+                        yPosition += lines.length * 5;
+                    } else {
+                        doc.text('   Peticiones: Sin peticiones específicas', 25, yPosition);
+                        yPosition += 5;
+                    }
+
+                    yPosition += 3; // Espacio entre personas
+                });
+
+                // Resumen al final
+                if (yPosition > 240) {
+                    doc.addPage();
+                    yPosition = 20;
+                }
+
+                doc.setFontSize(12);
+                doc.setTextColor(114, 47, 55);
+                doc.text('RESUMEN DEL PROCESO:', 20, yPosition + 10);
+
+                doc.setFontSize(9);
+                doc.setTextColor(0, 0, 0);
+                const resumenText = `Se ha completado exitosamente el proceso de revisión de ${totalPersonas} personas. Este reporte incluye ${dataToInclude.length} registros según el filtro "${reportType}".`;
+                const resumenLines = doc.splitTextToSize(resumenText, 160);
+                doc.text(resumenLines, 20, yPosition + 20);
+
+                doc.text('Generado por GenPeticiones - Sistema de Gestión de Peticiones', 20, yPosition + 35);
+
+                // Footer con fecha y hora
+                const now = new Date();
+                doc.setFontSize(8);
+                doc.setTextColor(128, 128, 128);
+                doc.text(`Proceso completado el ${now.toLocaleString('es-ES')}`, 20, 285);
+
+                // Descargar el PDF
+                const fileName = `Proceso_Completado_${reportType.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.pdf`;
+                doc.save(fileName);
+
+                // Guardar en consultas si está marcado el checkbox y es admin
+                if (isAdminLoggedIn && document.getElementById('saveToConsultasCheckbox').checked) {
+                    saveFinalPdfToConsultas(reportType, dataToInclude.length);
+                }
+
+                alert(`✅ PDF generado y descargado: ${fileName}`);
+                console.log('📊 PDF final generado:', fileName);
+
+            } catch (e) {
+                alert('❌ Error al generar el PDF: ' + e.message);
+                console.error('Error:', e);
+            }
+        }
+
+        // Guardar PDF final en consultas
+        function saveFinalPdfToConsultas(reportType, recordCount) {
+            const savedPdfs = JSON.parse(localStorage.getItem('gen_saved_pdfs') || '[]');
+            const newPdf = {
+                id: Date.now(),
+                name: `Proceso_Completado_${reportType.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}`,
+                date: new Date().toISOString().split('T')[0],
+                formattedDate: new Date().toLocaleDateString('es-ES', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric'
+                }),
+                type: reportType,
+                records: recordCount,
+                size: Math.round(Math.random() * 200 + 150) + ' KB',
+                description: `${reportType} generado desde proceso completado`
+            };
+
+            savedPdfs.unshift(newPdf); // Añadir al principio
+            localStorage.setItem('gen_saved_pdfs', JSON.stringify(savedPdfs));
+            console.log('💾 PDF guardado en consultas:', newPdf.name);
+        }
+
+        // Volver a empezamos desde pantalla final
+        function goBackToEmpezamos() {
+            document.getElementById('finalScreen').classList.add('hidden');
+            document.getElementById('empezamosScreen').classList.remove('hidden');
+        }
+
+        // Descartar cambios realizados
+        function discardChanges() {
+            if (confirm('¿Estás seguro de que quieres descartar todas las peticiones?\n\nEsto borrará únicamente el contenido de todas las casillas de "Peticiones", manteniendo los nombres y empresas.\n\nEsta acción no se puede deshacer.')) {
+
+                // Limpiar solo las peticiones de todas las personas
+                empezamosPersonas.forEach(persona => {
+                    persona.peticiones = '';
+                });
+
+                // Guardar los cambios
+                saveEmpezamosPersonas();
+
+                // Actualizar estadísticas en la pantalla final
+                updateFinalScreenStats();
+
+                // Mostrar confirmación
+                alert('✅ Peticiones descartadas correctamente.\n\nSe han borrado todas las peticiones pero se mantienen los nombres y empresas de las personas.');
+
+                console.log('🗑️ Peticiones descartadas - nombres y empresas mantenidos');
+            }
+        }
+
+        // Volver al inicio desde pantalla final
+        function goBackHomeFromFinal() {
+            document.getElementById('finalScreen').classList.add('hidden');
+        }
+
+        // ===== SISTEMA DE RECUPERACIÓN DE CREDENCIALES =====
+
+
+
+        // ===== SISTEMA DE GESTOS TÁCTILES =====
+
+        // Inicializar gestos táctiles
+        function initializeGestures() {
+            // Verificar si Hammer.js está disponible
+            if (typeof Hammer === 'undefined') {
+                console.log('⚠️ Hammer.js no disponible - gestos deshabilitados');
+                return;
+            }
+
+            // Gestos para la pantalla principal
+            initHomeGestures();
+
+            // Gestos para la pantalla de empezamos
+            initEmpezamosGestures();
+
+            // Gestos para el logo
+            initLogoGestures();
+
+            // Gestos para consultar peticiones
+            initConsultarGestures();
+
+            console.log('👆 Gestos táctiles inicializados');
+        }
+
+        // Gestos para la pantalla principal
+        function initHomeGestures() {
+            const container = document.querySelector('.container');
+            if (!container) return;
+
+            const hammer = new Hammer(container);
+
+            // Deslizar hacia arriba para ir a "Empezamos"
+            hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+            hammer.on('swipeup', function (e) {
+                if (!document.getElementById('empezamosScreen').classList.contains('hidden')) return;
+                if (!document.getElementById('consultarScreen').classList.contains('hidden')) return;
+                if (!document.getElementById('adminPanel').classList.contains('hidden')) return;
+
+                showGestureHint('⬆️ Deslizar hacia arriba detectado');
+                setTimeout(() => goToEmpezamos(), 300);
+            });
+
+            // Deslizar hacia la izquierda para consultar peticiones
+            hammer.on('swipeleft', function (e) {
+                if (!document.getElementById('empezamosScreen').classList.contains('hidden')) return;
+                if (!document.getElementById('consultarScreen').classList.contains('hidden')) return;
+                if (!document.getElementById('adminPanel').classList.contains('hidden')) return;
+
+                showGestureHint('⬅️ Deslizar hacia la izquierda detectado');
+                setTimeout(() => goToConsultar(), 300);
+            });
+
+            // Deslizar hacia la derecha para panel de admin (solo si está logueado)
+            hammer.on('swiperight', function (e) {
+                if (!isAdminLoggedIn) return;
+                if (!document.getElementById('empezamosScreen').classList.contains('hidden')) return;
+                if (!document.getElementById('consultarScreen').classList.contains('hidden')) return;
+                if (!document.getElementById('adminPanel').classList.contains('hidden')) return;
+
+                showGestureHint('➡️ Deslizar hacia la derecha detectado');
+                setTimeout(() => showAdminPanel(), 300);
+            });
+        }
+
+        // Gestos para la pantalla de empezamos
+        function initEmpezamosGestures() {
+            const empezamosContainer = document.getElementById('empezamosScreen');
+            if (!empezamosContainer) return;
+
+            const hammer = new Hammer(empezamosContainer);
+            hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+            // Deslizar hacia la derecha para persona anterior
+            hammer.on('swiperight', function (e) {
+                if (empezamosContainer.classList.contains('hidden')) return;
+
+                if (currentEmpezamosIndex > 0) {
+                    showGestureHint('➡️ Persona anterior');
+                    setTimeout(() => previousPersonEmpezamos(), 200);
+                } else {
+                    showGestureHint('⚠️ Ya estás en la primera persona');
+                }
+            });
+
+            // Deslizar hacia la izquierda para persona siguiente
+            hammer.on('swipeleft', function (e) {
+                if (empezamosContainer.classList.contains('hidden')) return;
+
+                showGestureHint('⬅️ Persona siguiente');
+                setTimeout(() => nextPersonEmpezamos(), 200);
+            });
+
+            // Doble toque para guardar rápido
+            hammer.on('doubletap', function (e) {
+                if (empezamosContainer.classList.contains('hidden')) return;
+
+                saveCurrentPersonData();
+                showGestureHint('💾 Datos guardados (doble toque)');
+            });
+        }
+
+        // Gestos para el logo
+        function initLogoGestures() {
+            const logoSection = document.querySelector('.logo-section');
+            if (!logoSection) return;
+
+            const hammer = new Hammer(logoSection);
+
+            // Habilitar gestos de pellizco
+            hammer.get('pinch').set({ enable: true });
+
+            // Pellizcar para cambiar tamaño del logo (solo admin)
+            hammer.on('pinch', function (e) {
+                if (!isAdminLoggedIn) return;
+                if (!document.getElementById('logoModal').classList.contains('hidden')) return;
+
+                const scale = e.scale;
+                let newSize = Math.round(currentLogoSize * scale);
+                newSize = Math.max(120, Math.min(newSize, 200)); // Límites seguros
+
+                if (newSize !== currentLogoSize) {
+                    currentLogoSize = newSize;
+                    applyLogoChanges();
+                    showGestureHint(`🔍 Tamaño del logo: ${newSize}px`);
+                }
+            });
+
+            // Doble toque para abrir editor de logo (solo admin)
+            hammer.on('doubletap', function (e) {
+                if (!isAdminLoggedIn) return;
+                if (logoSection.contains(e.target) || e.target === logoSection) {
+                    showGestureHint('✏️ Abriendo editor de logo');
+                    setTimeout(() => editLogo(), 300);
+                }
+            });
+        }
+
+        // Gestos para consultar peticiones
+        function initConsultarGestures() {
+            const consultarContainer = document.getElementById('consultarScreen');
+            if (!consultarContainer) return;
+
+            const hammer = new Hammer(consultarContainer);
+            hammer.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL });
+
+            // Deslizar para cambiar páginas
+            hammer.on('swipeleft', function (e) {
+                if (consultarContainer.classList.contains('hidden')) return;
+
+                const totalPages = Math.ceil(filteredPdfs.length / pdfsPerPage);
+                if (currentPage < totalPages) {
+                    showGestureHint('⬅️ Página siguiente');
+                    setTimeout(() => nextPage(), 200);
+                } else {
+                    showGestureHint('⚠️ Ya estás en la última página');
+                }
+            });
+
+            hammer.on('swiperight', function (e) {
+                if (consultarContainer.classList.contains('hidden')) return;
+
+                if (currentPage > 1) {
+                    showGestureHint('➡️ Página anterior');
+                    setTimeout(() => previousPage(), 200);
+                } else {
+                    showGestureHint('⚠️ Ya estás en la primera página');
+                }
+            });
+        }
+
+        // Mostrar hint de gesto
+        function showGestureHint(message) {
+            // Crear elemento de hint
+            const hint = document.createElement('div');
+            hint.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: 600;
+                z-index: 4000;
+                backdrop-filter: blur(10px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+                pointer-events: none;
+                text-align: center;
+                max-width: 80%;
+            `;
+            hint.textContent = message;
+
+            document.body.appendChild(hint);
+
+            // Animar entrada
+            setTimeout(() => {
+                hint.style.opacity = '1';
+            }, 100);
+
+            // Animar salida y eliminar
+            setTimeout(() => {
+                hint.style.opacity = '0';
+                setTimeout(() => {
+                    if (hint.parentNode) {
+                        hint.parentNode.removeChild(hint);
+                    }
+                }, 300);
+            }, 2000);
+        }
+
+        // Gestos adicionales para accesibilidad
+        function initAccessibilityGestures() {
+            // Gesto de tres dedos para mostrar ayuda
+            document.addEventListener('touchstart', function (e) {
+                if (e.touches.length === 3) {
+                    showGestureHelp();
+                }
+            });
+
+            // Agitar para mostrar información de debug (simulado con movimiento rápido)
+            let lastAcceleration = { x: 0, y: 0, z: 0 };
+
+            if (window.DeviceMotionEvent) {
+                window.addEventListener('devicemotion', function (e) {
+                    const acceleration = e.accelerationIncludingGravity;
+                    if (!acceleration) return;
+
+                    const deltaX = Math.abs(acceleration.x - lastAcceleration.x);
+                    const deltaY = Math.abs(acceleration.y - lastAcceleration.y);
+                    const deltaZ = Math.abs(acceleration.z - lastAcceleration.z);
+
+                    if (deltaX + deltaY + deltaZ > 30) {
+                        showDebugInfo();
+                    }
+
+                    lastAcceleration = { x: acceleration.x, y: acceleration.y, z: acceleration.z };
+                });
+            }
+        }
+
+        // Mostrar ayuda de gestos
+        function showGestureHelp() {
+            const helpText = `
+                📱 GESTOS DISPONIBLES:
+                
+                🏠 Pantalla Principal:
+                • ⬆️ Deslizar arriba → Empezamos
+                • ⬅️ Deslizar izquierda → Consultar
+                • ➡️ Deslizar derecha → Admin (si logueado)
+                
+                👥 Empezamos:
+                • ⬅️ Deslizar izquierda → Siguiente persona
+                • ➡️ Deslizar derecha → Persona anterior
+                • 👆👆 Doble toque → Guardar datos
+                
+                🎨 Logo:
+                • 🤏 Pellizcar → Cambiar tamaño (admin)
+                • 👆👆 Doble toque → Editar logo (admin)
+                
+                📋 Consultar:
+                • ⬅️ Deslizar izquierda → Página siguiente
+                • ➡️ Deslizar derecha → Página anterior
+                
+                ℹ️ Otros:
+                • 👆👆👆 Tres dedos → Esta ayuda
+                • 📳 Agitar → Info de debug
+            `;
+
+            alert(helpText);
+        }
+
+        // Mostrar información de debug
+        function showDebugInfo() {
+            const debugInfo = `
+                🔧 INFORMACIÓN DE DEBUG:
+                
+                📊 Estado actual:
+                • Personas cargadas: ${empezamosPersonas ? empezamosPersonas.length : 0}
+                • Persona actual: ${currentEmpezamosIndex + 1}
+                • Admin logueado: ${isAdminLoggedIn ? 'Sí' : 'No'}
+                • PDFs guardados: ${allPdfs ? allPdfs.length : 0}
+                • Tamaño logo: ${currentLogoSize}px
+                
+                📱 Gestos:
+                • Hammer.js: ${typeof Hammer !== 'undefined' ? 'Activo' : 'No disponible'}
+                • Pantalla: ${window.innerWidth}x${window.innerHeight}
+                • Orientación: ${window.orientation || 'No disponible'}
+            `;
+
+            console.log(debugInfo);
+            showGestureHint('🔧 Info de debug en consola');
+        }
+
+        // Inicializar gestos cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', function () {
+            // Esperar un poco para que todo se cargue
+            setTimeout(() => {
+                initializeGestures();
+                initAccessibilityGestures();
+            }, 1000);
+        });
+
+        // ===== REGISTRO DEL SERVICE WORKER =====
+
+        // Registrar Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(function (registration) {
+                        console.log('✅ Service Worker registrado correctamente:', registration.scope);
+
+                        // Escuchar actualizaciones
+                        registration.addEventListener('updatefound', function () {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', function () {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // Nueva versión disponible
+                                    if (confirm('🔄 Nueva versión disponible. ¿Quieres actualizar?')) {
+                                        newWorker.postMessage({ type: 'SKIP_WAITING' });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch(function (error) {
+                        console.log('❌ Error al registrar Service Worker:', error);
+                    });
+
+                // Escuchar cuando el SW toma control
+                navigator.serviceWorker.addEventListener('controllerchange', function () {
+                    console.log('🔄 Service Worker actualizado - recargando página');
+                    window.location.reload();
+                });
+            });
+        } else {
+            console.log('⚠️ Service Worker no soportado en este navegador');
+        }
+
+        // Detectar si la app se está ejecutando como PWA
+        function isPWA() {
+            return window.matchMedia('(display-mode: standalone)').matches ||
+                window.navigator.standalone === true;
+        }
+
+        // Mostrar mensaje de instalación PWA
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', function (e) {
+            console.log('📱 PWA instalable detectada');
+            e.preventDefault();
+            deferredPrompt = e;
+
+            // Mostrar hint de instalación después de 3 segundos
+            setTimeout(() => {
+                if (!isPWA()) {
+                    showInstallHint();
+                }
+            }, 3000);
+        });
+
+        // Mostrar hint de instalación
+        function showInstallHint() {
+            const hint = document.createElement('div');
+            hint.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                left: 20px;
+                right: 20px;
+                background: #722F37;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 15px;
+                font-size: 14px;
+                font-weight: 600;
+                z-index: 5000;
+                box-shadow: 0 10px 30px rgba(114, 47, 55, 0.3);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                animation: slideUp 0.3s ease;
+            `;
+
+            hint.innerHTML = `
+                <div>
+                    <div style="font-size: 16px; margin-bottom: 5px;">📱 Instalar GenPeticiones</div>
+                    <div style="opacity: 0.9; font-size: 12px;">Añade la app a tu pantalla de inicio</div>
+                </div>
+                <div>
+                    <button onclick="installPWA()" style="background: #A4C639; color: white; border: none; padding: 8px 15px; border-radius: 8px; font-weight: 600; margin-right: 10px; cursor: pointer;">Instalar</button>
+                    <button onclick="dismissInstallHint()" style="background: transparent; color: white; border: 1px solid rgba(255,255,255,0.3); padding: 8px 15px; border-radius: 8px; font-weight: 600; cursor: pointer;">Ahora no</button>
+                </div>
+            `;
+
+            hint.id = 'installHint';
+            document.body.appendChild(hint);
+        }
+
+        // Instalar PWA
+        function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(function (choiceResult) {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('✅ PWA instalada por el usuario');
+                    } else {
+                        console.log('❌ Usuario rechazó la instalación');
+                    }
+                    deferredPrompt = null;
+                    dismissInstallHint();
+                });
+            }
+        }
+
+        // Descartar hint de instalación
+        function dismissInstallHint() {
+            const hint = document.getElementById('installHint');
+            if (hint) {
+                hint.style.animation = 'slideDown 0.3s ease';
+                setTimeout(() => {
+                    if (hint.parentNode) {
+                        hint.parentNode.removeChild(hint);
+                    }
+                }, 300);
+            }
+        }
+
+        // Añadir animaciones CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideUp {
+                from { transform: translateY(100%); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            @keyframes slideDown {
+                from { transform: translateY(0); opacity: 1; }
+                to { transform: translateY(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        console.log('🚀 GenPeticiones v1.0.0 - Sistema completo implementado');
+        console.log('🔑 Credenciales por defecto: admin/123456');
+        console.log('🎛️ Panel de administración disponible');
+        console.log('📋 Sistema de consulta de peticiones activo');
+        console.log('⭐ Sistema de gestión de personas implementado');
+        console.log('🎉 Pantalla final de proceso completado activa');
+        console.log('🔐 Sistema de recuperación de credenciales activo');
+        console.log('👆 Sistema de gestos táctiles implementado');
+        console.log('📱 PWA Service Worker registrado');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+{
+  "name": "GenPeticiones - Sistema de Gestión",
+  "short_name": "GenPeticiones",
+  "description": "Sistema completo de gestión de peticiones con panel de administración",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f5f5",
+  "theme_color": "#722F37",
+  "scope": "./",
+  "lang": "es",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgdmlld0JveD0iMCAwIDE1MiAxNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE1MiIgaGVpZ2h0PSIxNTIiIHJ4PSIzMyIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDM4IDc2IEEgMzggMzggMCAwIDEgNzYgMzgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxOSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAxMTQgNzYgQSAzOCAzOCAwIDAgMCA3NiAzOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iNDciIHk9IjY5IiB3aWR0aD0iNTgiIGhlaWdodD0iMTQiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSA1MiAxMDAgQSAyNCAyNCAwIDAgMCAxMDAgMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iMTkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==",
+      "sizes": "152x152",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjE5MiIgaGVpZ2h0PSIxOTIiIHJ4PSI0MiIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDQ4IDk2IEEgNDggNDggMCAwIDEgOTYgNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIyNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSAxNDQgOTYgQSA0OCA0OCAwIDAgMCA5NiA0OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iNjAiIHk9Ijg4IiB3aWR0aD0iNzIiIGhlaWdodD0iMTYiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSA2NiAxMjYgQSAzMCAzMCAwIDAgMCAxMjYgMTI2IiBmaWxsPSJub25lIiBzdHJva2U9IiNBNEM2MzkiIHN0cm9rZS13aWR0aD0iMjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwvc3ZnPg==",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJ4PSIxMTIiIGZpbGw9IndoaXRlIi8+PCEtLSBBcmNvcyBzdXBlcmlvcmVzIGVuIGJ1cmRlb3MgLS0+PHBhdGggZD0iTSAxMjggMjU2IEEgMTI4IDEyOCAwIDAgMSAyNTYgMTI4IiBmaWxsPSJub25lIiBzdHJva2U9IiM3MjJGMzciIHN0cm9rZS13aWR0aD0iNjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik0gMzg0IDI1NiBBIDEyOCAxMjggMCAwIDAgMjU2IDEyOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNzIyRjM3IiBzdHJva2Utd2lkdGg9IjY0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48IS0tIEJhcnJhIHZlcmRlIGhvcml6b250YWwgLS0+PHJlY3QgeD0iMTYwIiB5PSIyMzYiIHdpZHRoPSIxOTIiIGhlaWdodD0iNDAiIGZpbGw9IiNBNEM2MzkiLz48IS0tIEFyY28gaW5mZXJpb3IgdmVyZGUgLS0+PHBhdGggZD0iTSAxNzYgMzM2IEEgODAgODAgMCAwIDAgMzM2IDMzNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTRDNjM5IiBzdHJva2Utd2lkdGg9IjY0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Empezar Proceso",
+      "short_name": "Empezar",
+      "description": "Comenzar el proceso de gestión de personas",
+      "url": "./index.html#empezar",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMCIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDI0IDQ4IEEgMjQgMjQgMCAwIDEgNDggMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSA3MiA0OCBBIDI0IDI0IDAgMCAwIDQ4IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3MjJGMzciIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwhLS0gQmFycmEgdmVyZGUgaG9yaXpvbnRhbCAtLT48cmVjdCB4PSIzMCIgeT0iNDQiIHdpZHRoPSIzNiIgaGVpZ2h0PSI4IiBmaWxsPSIjQTRDNjM5Ii8+PCEtLSBBcmNvIGluZmVyaW9yIHZlcmRlIC0tPjxwYXRoIGQ9Ik0gMzMgNjMgQSAxNSAxNSAwIDAgMCA2MyA2MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTRDNjM5IiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Consultar PDFs",
+      "short_name": "Consultar",
+      "description": "Ver y descargar PDFs guardados",
+      "url": "./index.html#consultar",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMCIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDI0IDQ4IEEgMjQgMjQgMCAwIDEgNDggMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSA3MiA0OCBBIDI0IDI0IDAgMCAwIDQ4IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3MjJGMzciIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwhLS0gQmFycmEgdmVyZGUgaG9yaXpvbnRhbCAtLT48cmVjdCB4PSIzMCIgeT0iNDQiIHdpZHRoPSIzNiIgaGVpZ2h0PSI4IiBmaWxsPSIjQTRDNjM5Ii8+PCEtLSBBcmNvIGluZmVyaW9yIHZlcmRlIC0tPjxwYXRoIGQ9Ik0gMzMgNjMgQSAxNSAxNSAwIDAgMCA2MyA2MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTRDNjM5IiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Panel Admin",
+      "short_name": "Admin",
+      "description": "Acceso al panel de administración",
+      "url": "./index.html#admin",
+      "icons": [
+        {
+          "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHZpZXdCb3g9IjAgMCA5NiA5NiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iOTYiIGhlaWdodD0iOTYiIHJ4PSIyMCIgZmlsbD0id2hpdGUiLz48IS0tIEFyY29zIHN1cGVyaW9yZXMgZW4gYnVyZGVvcyAtLT48cGF0aCBkPSJNIDI0IDQ4IEEgMjQgMjQgMCAwIDEgNDggMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcyMkYzNyIgc3Ryb2tlLXdpZHRoPSIxMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBhdGggZD0iTSA3MiA0OCBBIDI0IDI0IDAgMCAwIDQ4IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM3MjJGMzciIHN0cm9rZS13aWR0aD0iMTIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjwhLS0gQmFycmEgdmVyZGUgaG9yaXpvbnRhbCAtLT48cmVjdCB4PSIzMCIgeT0iNDQiIHdpZHRoPSIzNiIgaGVpZ2h0PSI4IiBmaWxsPSIjQTRDNjM5Ii8+PCEtLSBBcmNvIGluZmVyaW9yIHZlcmRlIC0tPjxwYXRoIGQ9Ik0gMzMgNjMgQSAxNSAxNSAwIDAgMCA2MyA2MyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQTRDNjM5IiBzdHJva2Utd2lkdGg9IjEyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48L3N2Zz4=",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}
